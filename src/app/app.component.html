@@ -1,3 +1,9 @@
 <tui-root>
   <button tuiButton appearance="primary">Content</button>
+
+  <app-menu [items]="items" [content]="option" class="menu"></app-menu>
+
+  <ng-template #option let-name>
+    <span>-- {{ name }} --</span>
+  </ng-template>
 </tui-root>

@@ -9,14 +9,17 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { TuiRoot } from '@taiga-ui/core';
 import { NG_EVENT_PLUGINS } from '@taiga-ui/event-plugins';
 import { TuiButton } from '@taiga-ui/core';
+import { PolymorpheusModule } from '@tinkoff/ng-polymorpheus';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment.development';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import { environment } from '../environments/environment.development';
     BrowserAnimationsModule,
     TuiRoot,
     TuiButton,
+    PolymorpheusModule,
   ],
   providers: [
     NG_EVENT_PLUGINS,
